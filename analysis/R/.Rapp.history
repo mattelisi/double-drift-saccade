@@ -1,0 +1,870 @@
+rose.diag(purAngles,bins=32)
+rose.diag(purAngles,bins=32,prop=1.2)
+rose.diag(purAngles,bins=32,prop=1.6)
+rose.diag(purAngles,bins=32,prop=1.8)
+rose.diag(purAngles,bins=32,prop=2.5)
+rose.diag(purAngles,bins=32,prop=2.8)
+rose.diag(purAngles,bins=32,prop=3)
+rose.diag(purAngles,bins=32,prop=4)
+rose.diag(purAngles,bins=32,prop=4.5)
+rose.diag(purAngles,bins=32,prop=4)
+rose.diag(purAngles,bins=32,prop=3.8)
+rose.diag(purAngles,bins=32,prop=3.6)
+rose.diag(purAngles,bins=32,prop=3.5)
+rose.diag(x, bins=32, prop=3.5)
+rose.diag(purAngles,bins=32,prop=3.5)
+rayleigh.test(x)
+rayleigh.test(purAngles)
+rao.spacing.test(x)
+unifTest <- rao.spacing.test(purAngles)
+0.05/16
+unifTest <- rao.spacing.test(purAngles, alpha = 0.01)
+unifTest
+unifTest <- rao.spacing.test(purAngles, alpha = 0.001)
+unifTest <- rao.spacing.test(purAngles, alpha = 0)
+unifTest
+unifTest <- rayleigh.test(purAngles, alpha = 0)
+unifTest <- rayleigh.test(purAngles)
+unifTest
+str(unifTest)
+.Machine
+mean(purAngles)
+mean(purAngles)*180/pi
+str(unifTest)
+rho.circular(purAngles)
+str(unifTest)
+unifTest$statistic
+unifTest$p.value
+unifTest$p.value < 0.05/12
+0.05/12
+purAngles <- purAngles[which(!is.na(purAngles))]#
+		plot(purAngles,stack=T,shrink=3)#
+		lines(density.circular(purAngles,bw=bw.nrd.circular(purAngles)))
+?rayleigh.test
+envTest <- rayleigh.test(purAngles, mu=0)
+purAngles
+envTest <- rayleigh.test(purAngles, mu=circular(0))
+envTest$p.value
+rayleigh.test(purAngles, mu=circular(0))$p.valu
+rayleigh.test(purAngles, mu=circular(0))$p.value
+rayleigh.test(purAngles, mu=circular(pi/2))$p.value
+rayleigh.test(purAngles, mu=circular(-pi/2))$p.value
+t
+?matrix
+purRho <- array(length=2*length(unique(data$ID)))
+purRho <- array(dim=2*length(unique(data$ID)))
+purRho
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))
+p.env[ct]rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}
+ct=1
+if(t=="left"){#
+			p.drift[ct]z- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}
+rayleigh.test(purAngles, mu=circular(-pi/2))$p.value
+if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}
+p.drift
+str(data)
+unique(data$alpha)
+tapply(data$alpha,data$tilt,mean)
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")
+tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t)])
+tiltAngle
+tiltAngle*180/pi
+p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value
+rayleigh.test(purAngles, mu=tiltAngle)$p.value
+rayleigh.test(purAngles)
+str(data)
+data$sacAngle1
+hist(data$sacAngle1)
+hist(data$sacAngle1*180/pi)
+hist(data$sacAngle1)
+hist(data$sacAngle1*pi/180)
+hist(data$sacAngle1)
+hist(data$sacAngle1*180/pi)
+plot(data$sacAngle1,data$sacAngle2)
+data$sacAngle <- circular(data$sacAngle1, type="angles",units="radians")
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")
+data$sacAngleDiff
+sacAngleDiff <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t)])
+cor.circular(purAngles, sacAngleDiff)
+purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t)]
+sacAngleDiff <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t)])
+library(circular)#
+#
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")
+sacAngleDiff <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t)])
+sacAngleDiff
+purAngles
+sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t)])
+cor.circular(purAngles, sacAngleDiff)
+cor.circular(purAngles, sacAngleDiff,test=T)
+plot(data$sacAngle1,data$pursuitDirAng)
+sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)
+sacTest
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")#
+#
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t)])#
+		MeanDir[ct] <- mean(purAngles)#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+	}#
+}
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p)
+purRes
+MeanDir[ct] <- mean(purAngles[!is.na(purAngles)])
+MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")#
+#
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+	}#
+}
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p)
+purRes
+rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value
+sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t)])
+rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value
+rayleigh.test(purAngles, mu=sacAngleDiffMean)
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")#
+#
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+p.sac.mean <- array(dim=2*length(unique(data$ID)))#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t)])#
+		sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+		p.sac.mean[ct] <- rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value#
+	}#
+}#
+#
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p)
+purRes
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p, p.sac.mean)
+purRes
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")#
+#
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+p.sac.mean <- array(dim=2*length(unique(data$ID)))#
+#
+condition <- "illusion"#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t & $drift==condition)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t & $drift==condition)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t & $drift==condition)])#
+		sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t & $drift==condition)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+		p.sac.mean[ct] <- rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value#
+	}#
+}#
+#
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p, p.sac.mean)
+data$purDirDiff <- angDiff(data$envDirAng, data$pursuitDirAng)#
+data$purDirDiff <- circular(data$purDirDiff, type="angles",units="radians")#
+data$tiltAngle <- circular(data$alpha*pi/180, type="angles",units="radians")#
+data$sacAngleDiff <- circular(angDiff(data$envDirAng, data$sacAngle1), type="angles",units="radians")#
+#
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+p.sac.mean <- array(dim=2*length(unique(data$ID)))#
+#
+condition <- "illusion"#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t & data$drift==condition)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t & $datadrift==condition)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+		p.sac.mean[ct] <- rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value#
+	}#
+}#
+#
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p, p.sac.mean)
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+p.sac.mean <- array(dim=2*length(unique(data$ID)))#
+#
+condition <- "illusion"#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t & data$drift==condition)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+		p.sac.mean[ct] <- rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value#
+	}#
+}#
+#
+purRes <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p, p.sac.mean)
+purRes
+Rho <- array(dim=2*length(unique(data$ID)))#
+MeanDir <- array(dim=2*length(unique(data$ID)))#
+p.unif <- array(dim=2*length(unique(data$ID)))#
+p.env <- array(dim=2*length(unique(data$ID)))#
+p.drift <- array(dim=2*length(unique(data$ID)))#
+p.perceived <- array(dim=2*length(unique(data$ID)))#
+cor.sac <- array(dim=2*length(unique(data$ID)))#
+cor.sac.p <- array(dim=2*length(unique(data$ID)))#
+p.sac.mean <- array(dim=2*length(unique(data$ID)))#
+#
+condition <- "control"#"illusion"#
+#
+ct <- 0#
+for(i in unique(data$ID)){#
+	for(t in unique(data$tilt)){#
+		ct <- ct +1#
+		purAngles <- data$purDirDiff[which(data$ID==i & data$tilt==t & data$drift==condition)]#
+		tiltAngle <- mean(data$tiltAngle[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiff <- (data$sacAngleDiff[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		sacAngleDiffMean <- mean(data$sacAngleDiff[which(data$ID==i & data$tilt==t & data$drift==condition)])#
+		MeanDir[ct] <- mean.circular(purAngles[!is.na(purAngles)])#
+		# unifTest <- rao.spacing.test(purAngles, alpha = 0)#
+		unifTest <- rayleigh.test(purAngles)#
+		Rho[ct] <- unifTest$statistic#
+		p.unif[ct] <- unifTest$p.value#
+		p.env[ct]<- rayleigh.test(purAngles, mu=circular(0))$p.value#
+		if(t=="left"){#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(-pi/2))$p.value#
+		}else{#
+			p.drift[ct]<- rayleigh.test(purAngles, mu=circular(pi/2))$p.value#
+		}#
+		p.perceived[ct]<- rayleigh.test(purAngles, mu=tiltAngle)$p.value#
+		sacTest <- cor.circular(purAngles, sacAngleDiff,test=T)#
+		cor.sac[ct] <- sacTest$cor#
+		cor.sac.p[ct] <- sacTest$p.value#
+		p.sac.mean[ct] <- rayleigh.test(purAngles, mu=sacAngleDiffMean)$p.value#
+	}#
+}
+purRes_control <- data.frame(MeanDir, Rho, p.unif, p.env, p.drift, p.perceived, cor.sac, cor.sac.p, p.sac.mean)
+purRes_control
+purRes
+?rayleigh.test
+purRes$p.unif<0.0001
+purRes$p.unif<0.001
+purRes$p.unif<0.01
+purRes$p.unif<0.05
+purRes$p.unif<(0.05)
+purRes_control$p.unif<(0.05)
+sum(purRes$p.unif<(0.05))
+sum(purRes_control$p.unif<(0.05))
+conf.level <- 0.05/6
+conf.level
+conflev <- 0.05/6
+sum(purRes$p.unif<(conflev))
+sum(purRes_control$p.unif<(conflev))
+purRes$p.env
+purRes$p.env[purRes$p.unif<(conflev)]
+min(purRes$p.env)
+min(purRes$p.drift)
+purRes$cor.sac.p<(conflev)
+purRes$p.sac.mean<(conflev)
+purRes
+str(data)
+8/12
+purRes$cor.sac.p<(conflev)
+sum(purRes$cor.sac.p<(conflev))
+sum(purRes_control$cor.sac.p<(conflev))
+mean(purRes$cor.sac)
+mean(purRes_control$cor.sac)
+purRes_control$cor.sac
+purRes$cor.sac
+mean(purRes$cor.sac[purRes$cor.sac.p<(conflev)])
+mean(purRes_control$cor.sac[purRes_control$cor.sac.p<(conflev)])
+sacAngleDiffMean
+pol2cart <- function(th,r){#
+	x <- r*cos(th)#
+	y <- r*sin(th)#
+	invisible(cbind(x,y))#
+}
+str(data)
+purPolar <- pol2cart(data$pos_p_X, data$pos_p_Y)
+purPolar
+purPolar <- cart2pol(data$pos_p_X, data$pos_p_Y)
+# pursuit amplitude #
+cart2pol <- function(x,y){#
+	th <- atan2(y,x)#
+	r <- sqrt(abs(x^2) + abs(y^2))#
+	invisible(cbind(th,r))#
+}
+purPolar <- cart2pol(data$pos_p_X, data$pos_p_Y)
+purPolar
+purPolar[,2]
+mean(purPolar[,2])
+mean(purPolar[,2],na.rm=T)
+0.22/(0.008)
+hist(purPolar[,2])
+plot(purPolar[,2])
+mean(purPolar[which(purPolar[,2]<10),2],na.rm=T)
+0.2/(8/1000)
+0.2/(70/1000)
+tapply(purPolar[,2], data$ID,mean)
+tapply(purPolar[,2], data$ID,mean,na.rm=T)
+mean(tapply(purPolar[,2], data$ID,mean,na.rm=T))
+sd(tapply(purPolar[,2], data$ID,mean,na.rm=T))
+80-10
+mean(tapply(purPolar[,2], data$ID,mean,na.rm=T))/(70/1000)
+0.22//(70/1000)
+0.22/(70/1000)
+##
+# saccade data analysys version 2#
+# double-drift article #1#
+##
+#
+rm(list=ls())#
+setwd("~/Dropbox/WORKS 2014/infinite regress #1/saccade #4 no-flash/analysis/R/")#
+#
+# load data#
+data <- read.table("AllSubjects_V5D8T2S1000.txt",header=T,sep="\t")#
+data$sub <- as.numeric(substr(data$code,start=1,stop=2))#
+data$ID <- as.factor(substr(data$code,start=3,stop=4))#
+#
+# th table #
+thTable <- read.table("thdata.txt",header=T,sep="\t")#
+#
+with(data, plot(envDirAng,pursuitDirAng))#
+with(data, boxplot(pursuitDirAng~envDirAng))#
+with(data, boxplot(pursuitDirAng~driftDirAng))#
+#
+# check alpha values#
+# alphaTable <- tapply(data$alpha,list(data$ID,data$tilt),mean)#
+#
+# load #
+library(lme4)#
+library(ggplot2) #
+#
+# prepare data#
+data$sacXamp <- data$sacxOffset - data$sacxOnset #
+data$sacYamp <- data$sacyOffset - data$sacyOnset#
+#
+data$drift <- as.factor(ifelse(data$driftSpeed==0,"control","illusion"))#
+data$initPos <- as.factor(ifelse(data$initPos==1,"top","bottom"))#
+data$tilt <- factor(sign(data$alpha))#
+data$tilt <- as.factor(ifelse(data$tilt==-1,"left","right"))#
+#
+data$latency <- data$sacRT.1/1000#
+# trimming --------------------------------------------------------#
+min(data$sacXamp)#
+max(data$sacXamp)#
+min(data$sacYamp)#
+max(data$sacYamp)#
+#
+min(data$sacRT.1)#
+max(data$sacRT.1)#
+#
+sum(which(data$sacRT.1<100 | data$sacRT.1>600))/length(data$sacRT.1) # 3.505407 % excluded#
+data <- data[-which(data$sacRT.1<100 | data$sacRT.1>600),]#
+#
+# quartz(width = 3, height = 3)#
+# qplot(data$sacRT.1, geom="histogram",xlab="saccade latency [ms]", binwidth=10)#
+#
+mean(tapply(data$sacRT.1,data$ID,mean))#
+sd(tapply(data$sacRT.1,data$ID,mean))#
+# -----------------------------------------------------------------#
+# check tilt#
+# quartz(); with(data=data[data$ID=="sb" & data$tilt=="right",],plot(sacXamp,sacYamp))#
+# quartz(); with(data=data[data$ID=="sb" & data$tilt=="right",],plot(tarPosSacOnX,tarPosSacOnY))#
+# quartz(); with(data=data[data$ID=="sb" & data$tilt=="right",],plot(tarPosLandX,tarPosLandY))#
+# quartz(); with(data=data[data$ID=="sb" & data$tilt=="right",],plot(tarPosSacOnY,sacYamp))#
+# quartz(); with(data=data[data$ID=="sb" & data$tilt=="right",],plot(sacxOffset,sacyOffset))#
+#
+# -----------------------------------------------------------------#
+# fit separate MIXED model for vertical and horizontal components#
+mCX <- lmer(sacXamp ~ tarPosSacOnX * drift + (tarPosSacOnX+drift|ID), data=data)#
+mCY <- lmer(sacYamp ~ tarPosSacOnY * drift + (tarPosSacOnY+drift|ID), data=data)#
+#
+# within subjects#
+require(nlme)#
+mCYlist <- lmList(sacYamp ~ tarPosSacOnY * drift | ID, data=data[,c(57,54,58,55)])#
+mCXlist <- lmList(sacXamp ~ tarPosSacOnX * drift | ID, data=data[,c(56,53,58,55)]) # does not work if you don't restrict the database#
+coef(mCXlist)#
+#
+summary(mCX)#
+summary(mCY)#
+#
+VarCorr(mCX)#
+VarCorr(mCY)#
+#
+# residual variance#
+attr(VarCorr(mCX),"sc")#
+#
+# test drift with LRT tests#
+# anova(mCX, update(mCX, .~. -tarPosSacOnX:drift))#
+# anova(mCX, update(mCX, .~. -drift -tarPosSacOnX:drift))#
+#
+# anova(mCY, update(mCY, .~. -tarPosSacOnY:drift))#
+# anova(mCY, update(mCY, .~. -drift -tarPosSacOnY:drift))#
+#
+# -----------------------------------------------------------------#
+## multivariate model 1#
+mXY_sb <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="sb",])#
+mXY_ml <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="ml",])#
+mXY_hk <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="hk",])#
+mXY_ce <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="ce",])#
+mXY_fp <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="fp",])#
+mXY_tm <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID=="tm",])#
+#
+# -----------------------------------------------------------------#
+# reversePredictMV <- function(fitm){	#
+	# Y <- model.frame(fitm)[,1]#
+	# d <- as.numeric(model.frame(fitm)$drift)-1#
+	# beta0 <- rbind(coef(fitm)[1,])#
+	# betad <- rbind(coef(fitm)[4,])#
+	# B <- coef(fitm)[2:3,]#
+	# Bd <- coef(fitm)[5:6,]#
+	# Xrec <- matrix(nrow = nrow(Y), ncol = 2)#
+	# for(i in 1:nrow(Y)){#
+		# FF <- (Y[i,] - beta0 - d[i]*betad)#
+		# Xrec[i,] <- FF %*% solve(B + d[i]*Bd)#
+	# }#
+	# return(Xrec)#
+# }#
+#
+# reversePredictMV(mXY)#
+#
+# for(asb in unique(data$ID)){#
+	# mXY <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID==asb,])#
+	# data$reverseX_mv[data$ID==asb] <- reversePredictMV(mXY)[,1]#
+	# data$reverseY_mv[data$ID==asb] <- reversePredictMV(mXY)[,2]#
+# }#
+#
+# ggplot(data,aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(10/10))+facet_grid(drift+tilt~ID,)+labs(x="horizontal [dva]", y = "vertical [dva]")+geom_point(data=data, aes(x=reverseX_mv, y=reverseY_mv,color=tilt),size=2,alpha=I(5/10)) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey"))+scale_color_manual(values=c("blue","red"),guide=F)+ggtitle("reverse-predict from within-multivariate fits")#+coord_fixed()#
+#
+# -----------------------------------------------------------------#
+# R SQUARED #
+r_mv <- data.frame(rbind(c(summary(mXY_sb)$"Response sacXamp"$r.squared, summary(mXY_sb)$"Response sacYamp"$r.squared),#
+c(summary(mXY_ml)$"Response sacXamp"$r.squared, summary(mXY_ml)$"Response sacYamp"$r.squared),#
+c(summary(mXY_hk)$"Response sacXamp"$r.squared, summary(mXY_hk)$"Response sacYamp"$r.squared),#
+c(summary(mXY_ce)$"Response sacXamp"$r.squared, summary(mXY_ce)$"Response sacYamp"$r.squared),#
+c(summary(mXY_fp)$"Response sacXamp"$r.squared, summary(mXY_fp)$"Response sacYamp"$r.squared),#
+c(summary(mXY_tm)$"Response sacXamp"$r.squared, summary(mXY_tm)$"Response sacYamp"$r.squared)))#
+colnames(r_mv) <- c("rX","rY")#
+#
+mean(r_mv$rX)#
+mean(r_mv$rY)#
+#
+sd(r_mv$rX)#
+sd(r_mv$rY)#
+#
+# PARAMETERS #
+drift_x <- c(coef(mXY_sb)[5,1],coef(mXY_ml)[5,1],coef(mXY_hk)[5,1],coef(mXY_ce)[5,1],coef(mXY_fp)[5,1],coef(mXY_tm)[5,1])#
+mean(drift_x)#
+c(mean(drift_x)-(qt(0.975, df = 6 -1)*sqrt(var(drift_x)/6)), mean(drift_x)+(qt(0.975, df = 6 -1)*sqrt(var(drift_x)/6)))#
+#
+# #
+require(car)#
+Manova(mXY_sb)#
+Manova(mXY_ml)#
+Manova(mXY_hk)#
+Manova(mXY_ce)#
+Manova(mXY_fp)#
+Manova(mXY_tm)#
+#
+for(asb in unique(data$ID)){#
+	mXY <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID==asb,])#
+	data$fitted_mCX_mv[data$ID==asb] <- predict(mXY)[,1]#
+	data$fitted_mCY_mv[data$ID==asb] <- predict(mXY)[,2]#
+}#
+#
+# data$fitted_mCX_mv <- data$reverseX_mv#
+# data$fitted_mCY_mv <- data$reverseY_mv#
+# -----------------------------------------------------------------#
+# save fitted values#
+data$fitted_mCX <- predict(mCX)#
+data$fitted_mCY <- predict(mCY)#
+#
+data$fitted_mCX_w <- predict(mCXlist)#
+data$fitted_mCY_w <- predict(mCYlist)#
+#
+#data$fitted_mCX_mv <- predict(mXY)[,1]#
+#data$fitted_mCY_mv <- predict(mXY)[,2]#
+# compare models through determination coefficients#
+# mixed#
+mixed_r2 <- summary(lm(data$sacXamp ~ data$fitted_mCX))$r.squared#
+multi_within_r2 <- summary(lm(data$sacXamp ~ data$fitted_mCX_mv))$r.squared#
+multi_within_Y_r2 <- summary(lm(data$sacYamp ~ data$fitted_mCY_mv))$r.squared#
+# single_within_r2 <- summary(lm(data$sacXamp ~ data$fitted_mCX_w))$r.squared#
+#
+# ---------------------------------------------------------------------------------------------#
+# PLOT COMPONENTS AS A FUNCTION OF DISTANCE#
+# plot vertical components as a function of vertical distance (with fitted values)#
+#
+data$drift2 <- ifelse(data$drift=="illusion","double-drift","control")#
+#
+selID <- "ml"#
+#
+# plot single for image - vertical#
+quartz(width = 2.1, height = 4.7) #
+ggplot(data[data$ID=="sb" & data$tilt=="right",],aes(x=flashY, y=sacYamp))+geom_point(pch=21,size=I(2.1))+facet_grid(drift~ID)+labs(x="distance [dva]", y = "amplitude [dva]")+geom_line(data=data[data$ID=="sb",], aes(x=flashY,y=fitted_mCY_mv),size=2,color="red")+theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey")) +scale_x_continuous(limits=c(-1,1),breaks = c(-1,-0.5,0,0.5,1),labels = c(-1,-0.5,0,0.5,1))#
+#
+# plot single for image - horizontal#
+quartz(width = 2, height = 4.7) #
+ggplot(data[data$ID=="sb" & data$tilt=="right",],aes(x=tarPosSacOnX, y=sacXamp))+geom_point(pch=21,size=I(2.1))+facet_grid(drift~ID,)+labs(x="distance [dva]", y = "amplitude [dva]")+geom_line(data=data[data$ID=="sb",], aes(x=tarPosSacOnX,y=fitted_mCX_mv),size=2,color="red")+theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey")) +scale_x_continuous(limits=c(8.5,11.5),breaks = c(9,10,11),labels = c(9,10,11)) +scale_y_continuous(limits=c(6,12),breaks = c(6,7,8,9,10,11,12),labels = c(6,7,8,9,10,11,12))
+# +scale_x_continuous(limits=c(-1,1),breaks = c(-1,-0.5,0,0.5,1),labels = c(-1,-0.5,0,0.5,1))#
+#  + geom_smooth(method = "loess", size = 0.8, se = FALSE,color="orange")#
+# +scale_x_continuous(breaks = c(-1,0,1),labels = c(-1,0,1))#
+#  + scale_y_continuous(limits = c(6,12), breaks = c(6,7,8,9,10,11,12),labels = c(6,7,8,9,10,11,12))#
+# +geom_line(data=data, aes(x=tarPosSacOnX,y=predicted_mC1),size=2,color="red")#
+#
+# ---------------------------------------------------------------------------------------------#
+# generate new dataset for prediction#
+alphaTable <- tapply(data$alpha,list(data$ID,data$tilt),mean)#
+# alpha  <- c(-pi/4, pi/4)#
+l <- 3#
+ecc <- 10#
+sequence_l <- seq(-l/2, l/2, length.out=200)#
+#
+deg2rad <- function(degree){#
+	radians <- degree *pi / 180#
+}#
+#
+tarPosSacOnX <- {}#
+tarPosSacOnY <- {}#
+ID <- {}#
+alpha <- {}#
+#
+for(id in 1:nrow(alphaTable)){#
+for(tlt in 1:ncol(alphaTable)){#
+	alpha_ <- alphaTable[id, tlt]#
+	subj <- rownames(alphaTable)[id]#
+	# tarX <- ecc + sequence_l*cos(pi/2 - deg2rad(alpha_))#
+	# tarY <- sequence_l*sin(pi/2 - deg2rad(alpha_))#
+	tarX <- ecc + sequence_l*sin(deg2rad(alpha_))#
+	tarY <- sequence_l*cos(deg2rad(alpha_))#
+	tarPosSacOnX <- c(tarPosSacOnX, tarX)#
+	tarPosSacOnY <- c(tarPosSacOnY, tarY)#
+	ID <- c(ID, rep(subj,length(sequence_l)))#
+	alpha <- c(alpha, rep(alpha_,length(sequence_l)))#
+}#
+}#
+drift <- c(rep("control",length(ID)),rep("illusion",length(ID)))#
+nd <- data.frame(rep(tarPosSacOnX,2),rep(tarPosSacOnY,2),rep(ID,2),drift,rep(alpha,2))#
+colnames(nd) <- c("tarPosSacOnX","tarPosSacOnY","ID","drift","alpha")#
+#
+nd$fitted_mCX <- predict(mCX, newdata=nd)#
+nd$fitted_mCY <- predict(mCY, newdata=nd)#
+nd$fitted_mCX_w <- predict(mCXlist, newdata=nd)#
+nd$fitted_mCY_w <- predict(mCYlist, newdata=nd)#
+# nd$fitted_mCX_mv <- predict(mXY, newdata=nd)[,1]#
+# nd$fitted_mCY_mv <- predict(mXY, newdata=nd)[,2]#
+#
+for(asb in unique(nd$ID)){#
+	mXY <- lm(cbind(sacXamp,sacYamp) ~ (tarPosSacOnX + tarPosSacOnY)*drift, data=data[data$ID==asb,])#
+	nd$fitted_mCX_mv[nd$ID==asb] <- predict(mXY, newdata=nd[nd$ID==asb,])[,1]#
+	nd$fitted_mCY_mv[nd$ID==asb] <- predict(mXY, newdata=nd[nd$ID==asb,])[,2]#
+}#
+#
+nd$tilt <- as.factor(ifelse(sign(nd$alpha)==-1,"left","right"))#
+#
+	# # compute standard errors of predictions#
+	# nd$sacXamp <- 0#
+	# mm <- model.matrix(terms(mCX),nd)#
+	# nd$sacXamp <- predict(mCX, nd)#
+	# ## or nd$sacXamp <- mm %*% fixef(mCX)#
+	# pvar1 <- diag(mm %*% tcrossprod(vcov(mCX),mm))#
+	# tvar1 <- pvar1+VarCorr(mCX)$ID[1]  ## must be adapted for more complex models#
+	# # this includes only variance from fixed effects..#
+	# nd$fitted_mCX_plo <- nd$fitted_mCX - 2*sqrt(pvar1)#
+	# nd$fitted_mCX_phi <- nd$fitted_mCX + 2*sqrt(pvar1)#
+	# ## bootstrapped standard errors#
+	# myFUN <- function(.) {#
+		# fitted = predict(.,newdata=nd)#
+	# }#
+	# bootResult <- bootMer(mCX,myFUN,1000,.progress="txt",use.u=TRUE,type="parametric")#
+	# quantileCI <- function(v){#
+		# c(quantile(v, probs = 0.005,na.rm=T),quantile(v, probs = 0.995,na.rm=T))#
+	# }#
+	# qCI <- t(apply(bootResult$t,2,quantileCI))#
+	# nd$fitted_mCX_bootCIlo <- qCI[,1]#
+	# nd$fitted_mCX_bootCIhi <- qCI[,2]#
+	# nd$Xse <- apply(bootResult$t,2,var,na.rm=T)#
+	# nd$XSElower <- nd$fitted_mCX - 2*nd$Xse#
+	# nd$XSEupper <- nd$fitted_mCX + 2*nd$Xse#
+#
+# instead of standard errors of the mean, standard deviation of model residuals#
+attr(VarCorr(mCX),"sc")#
+nd$XresLo <- nd$fitted_mCX - attr(VarCorr(mCX),"sc")#
+nd$XresHi <- nd$fitted_mCX + attr(VarCorr(mCX),"sc")#
+#
+# panel subj plot#
+quartz(width = 6.8, height = 4.7) #
+ggplot(nd,aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(drift~ID,)+labs(x="predicted horiz. amplitude [dva]", y = "predicted vertical amplitude [dva]")+geom_point(data=nd, aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey"))+scale_color_manual(values=c("blue","red"),guide=F)+ggtitle("multivariate within-subjects fits\n(vertical and horizontal components analyzed together)")#
+# OK plot components #
+#
+t1 <- theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_blank(),panel.grid.minor=element_blank())#
+#
+quartz(width =4.8, height = 6) #
+ggplot(data,aes(x=tarPosSacOnY, y=sacYamp,color=tilt))+geom_point(pch=21,size=I(1.5),alpha=1,color="black")+facet_grid(tilt+drift2~ID,)+labs(x="gabor distance (vertical) at saccade onset [dva]", y = "vertical saccade amplitude [dva]")+geom_line(data=data, aes(x=tarPosSacOnY, y=fitted_mCY_mv,color=tilt),size=1)+scale_x_continuous(breaks = c(-1,0,1),labels = c(-1,0,1)) + scale_color_manual(values=c("blue","red"),guide=F) + t1 #
+#
+# # # horizontal#
+ggplot(data,aes(x=tarPosSacOnX, y=sacXamp,color=tilt))+geom_point(pch=21,size=I(1.5),alpha=1,color="black")+facet_grid(tilt+drift2~ID,)+labs(x="gabor distance (horizontal) at saccade onset [dva]", y = "horizontal saccade amplitude [dva]")+geom_line(data=data, aes(x=tarPosSacOnX, y=fitted_mCX_mv,color=tilt),size=1)+scale_x_continuous(limits=c(8.5,11.5),breaks = c(9,10,11),labels = c(9,10,11)) +scale_y_continuous(limits=c(6,12),breaks = c(6,7,8,9,10,11,12),labels = c(6,7,8,9,10,11,12)) + scale_color_manual(values=c("blue","red"),guide=F) + t1
+# + geom_smooth(method = "loess", size = 0.8, se = FALSE,color="orange") #
+#
+# ---------------------------------------------------------------------------------------------#
+# plot single subject with bands or data points#
+#
+# ml ce sb hk fp tm#
+selID <- "sb"#
+#
+quartz(width = 4.7, height = 3) #
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey",size=0),panel.grid.minor=element_line(colour="grey",size=0))+scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))
+quartz(width = 6.8, height = 4.7) #
+ggplot(nd[nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(drift~ID,)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey"))+scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(6.15,11.5),breaks = c(7,8,9,10,11),labels = c(7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))
+quartz(width = 6.8, height = 4.7) #
+ggplot(nd[nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(drift~ID,)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey"))+scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(6.15,11.5),breaks = c(7,8,9,10,11),labels = c(7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))
+?coord_cartesian
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey",size=0),panel.grid.minor=element_line(colour="grey",size=0))+scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+coord_cartesian()
+?coord_fixed
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_rect(colour="black",fill=NA,size=1),strip.background = element_rect(fill="white",color="black",size=0),strip.text=element_text(face="bold",size=rel(1.1)),panel.grid.major=element_line(colour="grey",size=0),panel.grid.minor=element_line(colour="grey",size=0))+scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+coord_fixed()
+theme3 <- theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_blank(),strip.background = element_blank(),strip.text=element_text(size=rel(0.8)),panel.grid.major=element_blank(),panel.grid.minor=element_blank(),axis.line.y=element_line(size=.4),axis.line.x=element_line(size=.4),legend.key=element_blank(),axis.text=element_text(size=rel(0.6)),axis.title=element_text(size=rel(0.8)),axis.text.x=element_text(size=8,color="black"),axis.text.y=element_text(size=8,color="black"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+coord_fixed()+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +theme_bw()+scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+coord_fixed()
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+coord_fixed()+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(3.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(4),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(2),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+library(grid)
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"))
+theme3 <- theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_blank(),strip.background = element_blank(),strip.text=element_text(size=rel(0.8)),panel.grid.major=element_blank(),panel.grid.minor=element_blank(),axis.line.y=element_line(size=.4),axis.line.x=element_line(size=.4),legend.key=element_blank(),axis.text=element_text(size=rel(0.6)),axis.title=element_text(size=rel(0.8)),axis.text.x=element_text(size=8,color="black"),axis.text.y=element_text(size=8,color="black"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [dva]", y = "distance [dva]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="[°]", y = "[°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.1,1.1),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]								", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                         ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                             ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="right",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="right",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="right",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+selID <- "ml"
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))+coord_fixed()
+selID <- "cp"
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))+coord_fixed()
+selID <- "ce"
+ggplot(nd[nd$ID==selID & nd$tilt=="left",],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt=="left",], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt=="left",], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))+coord_fixed()
+selID <- "ml"
+selTilt <- "right"
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))+coord_fixed()
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+selTilt <- "left"
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1.5, "lines"),axis.line=element_line(size=.4))
+selID <- "sb"#
+selTilt <- "left"
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.1,1.1),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1.5, "lines"),axis.line=element_line(size=.4))
+theme3 <- theme_bw()+theme(text=element_text(family="Helvetica"),panel.border=element_blank(),strip.background = element_blank(),strip.text=element_text(size=rel(0.8)),panel.grid.major=element_blank(),panel.grid.minor=element_blank(),axis.line.y=element_line(size=.4),axis.line.x=element_line(size=.4),legend.key=element_blank(),axis.text=element_text(size=rel(0.6)),axis.title=element_text(size=rel(0.8)),axis.text.x=element_text(size=6,color="black"),axis.text.y=element_text(size=6,color="black"))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.1,1.1),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1.5, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(tilt~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue","red"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.1,1.1),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(1, "lines"),axis.line=element_line(size=.4))
+quartz(width = 4.7, height = 3) #
+selID <- "sb"#
+selTilt <- "left"#
+library(grid)#
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+selTilt <- "right"
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.2,1.2),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("red","blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))
+selTilt <- "left"
+ggplot(nd[nd$ID==selID & nd$tilt==selTilt,],aes(x=tarPosSacOnX, y=tarPosSacOnY))+geom_point(color="grey",size=I(1),alpha = I(1/10))+facet_grid(.~drift)+labs(x="distance [°]                                               ", y = "distance [°]")+geom_point(data=data[data$ID==selID & data$tilt==selTilt,], aes(x=sacXamp, y=sacYamp,colour=tilt),pch=21, size=2,alpha=0.5)+geom_point(data=nd[nd$ID==selID & nd$tilt==selTilt,], aes(x=fitted_mCX_mv, y=fitted_mCY_mv,color=tilt),size=2) +scale_color_manual(values=c("blue"),guide=F)+scale_x_continuous(limits=c(5.5,11.5),breaks = c(4,5,6,7,8,9,10,11),labels = c(4,5,6,7,8,9,10,11)) +scale_y_continuous(limits=c(-1.5,1.5),breaks = c(-1.5,-1,-0.5,0,0.5,1,1.5),labels = c(-1.5,-1,-0.5,0,0.5,1,1.5))+theme3 + theme(panel.spacing = unit(2, "lines"),axis.line=element_line(size=.4))

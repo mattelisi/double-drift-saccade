@@ -1,0 +1,18 @@
+filelist=`cat edf2prep`
+
+for f in $filelist 
+do
+	echo $f
+	
+	edf2asc -s -miss -1.0 $f.edf
+	cat $f.asc | awk 'BEGIN{FS=" "}{print $1"\t"$2"\t"$3"\t"$4}' > dat.tmp
+	mv dat.tmp ../raw/$f.dat
+	rm $f.asc
+	
+	edf2asc -e $f.edf
+	cat $f.asc | grep -E 'MSG|START' > $f.msg
+	mv $f.msg ../raw/
+	rm $f.asc
+	
+	mv $f.edf ../edf/
+done
